@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Gamificação - Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-header fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <i class="bi bi-geo-alt-fill me-1"></i>
+                    <span>São Paulo - SP</span>
+                    <small class="ms-2">Sistema válido para colaboradores Swift</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>🎯 Gamificação Swift - Desperte seu potencial!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#dashboard">
+                <img src="assets/images/swift-foods-logo-3.png" alt="Swift" height="40" class="me-2">
+                <small class="text-swift-orange">Gamificação</small>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: var(--swift-orange);">
+                <span class="navbar-toggler-icon" style="background-image: url('data:image/svg+xml,%3csvg xmlns="
+                    http://www.w3.org/2000/svg" viewBox="0 0 30 30" %3e%3cpath stroke="rgba%2833, 37, 41, 0.75%29"
+                    stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"
+                    /%3e%3c/svg%3e');"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase active" href="index.html"
+                            style="color: var(--swift-orange);">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="pages/desafios.html"
+                            style="color: var(--text-dark);">Desafios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="pages/ranking.html"
+                            style="color: var(--text-dark);">Ranking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="pages/loja.html"
+                            style="color: var(--text-dark);">Loja</a>
+                    </li>
+                </ul>
+
+
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center btn-swift-green rounded px-3"
+                            href="#" role="button" data-bs-toggle="dropdown" style="text-decoration: none;">
+                            <img src="assets/images/users/João Silva.png" alt="João Silva" class="rounded-circle me-2"
+                                width="28" height="28">
+                            <div class="text-start">
+                                <small class="d-block text-white">BEM-VINDO!</small>
+                                <strong class="text-white">João Silva</strong>
+                            </div>
+                            <span class="badge bg-warning text-dark ms-2 fw-bold user-points">1.250 pts</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="pages/perfil.html"><i class="bi bi-person me-2"></i>Meu
+                                    Perfil</a>
+                            </li>
+                            <li><a class="dropdown-item" href="pages/termos.html"><i
+                                        class="bi bi-shield-check me-2"></i>Termos
+                                    e Regulamentos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><span class="dropdown-item disabled text-muted logout-disabled" data-bs-toggle="tooltip"
+                                    data-bs-placement="left"
+                                    title="Sistema de login será implementado no backend. Demo permanece como João Silva.">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Sair</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid" style="margin-top: 140px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="welcome-banner-clean bg-white border p-4 rounded-xl position-relative">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <div class="d-flex align-items-center">
+                                    <div class="me-3">
+                                        <div class="position-relative">
+                                            <img src="assets/images/users/João Silva.png" alt="João Silva"
+                                                class="rounded-circle" width="60" height="60"
+                                                style="border: 3px solid var(--swift-orange);">
+                                            <div class="position-absolute bottom-0 end-0 bg-swift-orange rounded-circle d-flex align-items-center justify-content-center"
+                                                style="width: 20px; height: 20px;">
+                                                <i class="bi bi-check-lg text-white" style="font-size: 0.8rem;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h4 class="mb-1 text-dark fw-semibold">Bem-vindo, João Silva</h4>
+                                        <p class="mb-0 text-muted">
+                                            Você está no <strong class="text-success">Top 3</strong> da sua loja SP
+                                            Centro.
+                                            Continue assim para subir no ranking geral! 🎯
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 text-end">
+                                <div class="d-flex justify-content-end align-items-center">
+                                    <div class="text-center me-3">
+                                        <small class="text-muted d-block">Seu nível</small>
+                                        <span
+                                            class="badge bg-swift-orange text-white px-3 py-2 fs-6">Intermediário</span>
+                                    </div>
+                                    <i class="bi bi-trophy text-warning" style="font-size: 2rem; opacity: 0.7;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-4">
+                                <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="bi bi-star-fill text-warning" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h2 class="text-swift-orange fw-bold mb-2">1.250</h2>
+                            <h6 class="text-dark mb-2 fw-semibold">Pontos Totais</h6>
+                            <div class="badge bg-success text-white px-3 py-2">
+                                <i class="bi bi-arrow-up me-1"></i>+85 esta semana
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-4">
+                                <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="bi bi-award-fill text-success" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h2 class="text-success fw-bold mb-2">#3</h2>
+                            <h6 class="text-dark mb-2 fw-semibold">Ranking Semanal</h6>
+                            <div class="badge bg-success text-white px-3 py-2">
+                                <i class="bi bi-arrow-up me-1"></i>Subiu 2 posições
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-4">
+                                <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="bi bi-building text-info" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h2 class="text-info fw-bold mb-2">#3</h2>
+                            <h6 class="text-dark mb-2 fw-semibold">Na Loja SP Centro</h6>
+                            <div class="badge bg-info text-white px-3 py-2">
+                                <i class="bi bi-people-fill me-1"></i>Entre 24 colaboradores
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body text-center">
+                            <div class="mb-4">
+                                <div class="bg-danger bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center"
+                                    style="width: 80px; height: 80px;">
+                                    <i class="bi bi-gift-fill text-danger" style="font-size: 2.5rem;"></i>
+                                </div>
+                            </div>
+                            <h2 class="text-danger fw-bold mb-2">3</h2>
+                            <h6 class="text-dark mb-2 fw-semibold">Recompensas</h6>
+                            <div class="badge bg-danger text-white px-3 py-2">
+                                <i class="bi bi-gift me-1"></i>Disponíveis para resgate
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-8 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-1">🎯 Desafios Ativos</h5>
+                                    <small class="text-muted">Complete e ganhe pontos extras!</small>
+                                </div>
+                                <a href="pages/desafios.html" class="btn btn-swift-orange btn-sm">Ver Todos</a>
+                            </div>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="challenge-item mb-4 p-3 rounded-3 border">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3">
+                                                <div class="bg-warning bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                                    style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-calendar-week-fill text-warning"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-semibold mb-1">Missão da Semana</h6>
+                                                <p class="text-muted mb-1 small">Vender 5 combos até domingo</p>
+                                                <div class="progress" style="height: 8px;">
+                                                    <div class="progress-bar bg-warning" role="progressbar"
+                                                        style="width: 60%"></div>
+                                                </div>
+                                                <small class="text-muted">3/5 combos vendidos</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <span class="badge bg-warning text-dark px-3 py-2 fw-bold">+150 pts</span>
+                                        <br><small class="text-muted">2 dias restantes</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="challenge-item mb-3 p-3 rounded-3 border">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="d-flex align-items-center">
+                                            <div class="me-3">
+                                                <div class="bg-success bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center"
+                                                    style="width: 50px; height: 50px;">
+                                                    <i class="bi bi-lightning-fill text-success"
+                                                        style="font-size: 1.5rem;"></i>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <h6 class="fw-semibold mb-1">Hora do Jogo Rápido</h6>
+                                                <p class="text-muted mb-1 small">Pontos dobrados das 18h às 20h</p>
+                                                <span class="badge bg-success text-white">Ativo agora!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-end">
+                                        <span class="badge bg-success text-white px-3 py-2 fw-bold">2x pontos</span>
+                                        <br><small class="text-success">⚡ Rush Hour</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-1">🏆 Top 5 - Loja SP Centro</h5>
+                                    <small class="text-muted">Ranking desta semana</small>
+                                </div>
+                                <a href="pages/ranking.html" class="btn btn-outline-primary btn-sm">Ver Mais</a>
+                            </div>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="ranking-list">
+                                <div class="ranking-item d-flex align-items-center justify-content-between mb-3 p-2 rounded-3"
+                                    style="background-color: #fff3cd;">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-warning text-dark me-2 fw-bold">1º</span>
+                                        <img src="assets/images/users/Maria Oliveira.png" alt="Maria Oliveira"
+                                            class="rounded-circle me-2" width="32" height="32">
+                                        <div>
+                                            <small class="fw-semibold d-block">Maria Oliveira</small>
+                                            <small class="text-muted">1.580 pts</small>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-trophy-fill text-warning"></i>
+                                </div>
+
+                                <div class="ranking-item d-flex align-items-center justify-content-between mb-3 p-2 rounded-3"
+                                    style="background-color: #e2e3e5;">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-secondary text-white me-2 fw-bold">2º</span>
+                                        <img src="assets/images/users/Carlos Santos.png" alt="Carlos Santos"
+                                            class="rounded-circle me-2" width="32" height="32">
+                                        <div>
+                                            <small class="fw-semibold d-block">Carlos Santos</small>
+                                            <small class="text-muted">1.420 pts</small>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-award-fill text-secondary"></i>
+                                </div>
+
+                                <div class="ranking-item d-flex align-items-center justify-content-between mb-3 p-2 rounded-3"
+                                    style="background-color: #ffeaa7; border: 2px solid var(--swift-orange);">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-swift-orange text-white me-2 fw-bold">3º</span>
+                                        <img src="assets/images/users/João Silva.png" alt="João Silva"
+                                            class="rounded-circle me-2" width="32" height="32">
+                                        <div>
+                                            <small class="fw-semibold d-block">João Silva <span
+                                                    class="text-swift-orange">(Você)</span></small>
+                                            <small class="text-muted">1.250 pts</small>
+                                        </div>
+                                    </div>
+                                    <i class="bi bi-person-check-fill text-swift-orange"></i>
+                                </div>
+
+                                <div class="ranking-item d-flex align-items-center justify-content-between mb-3 p-2">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-light text-dark me-2">4º</span>
+                                        <img src="assets/images/users/Ana Costa.png" alt="Ana Costa"
+                                            class="rounded-circle me-2" width="32" height="32">
+                                        <div>
+                                            <small class="fw-semibold d-block">Ana Costa</small>
+                                            <small class="text-muted">1.180 pts</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ranking-item d-flex align-items-center justify-content-between p-2">
+                                    <div class="d-flex align-items-center">
+                                        <span class="badge bg-light text-dark me-2">5º</span>
+                                        <img src="assets/images/users/Pedro Lima.png" alt="Pedro Lima"
+                                            class="rounded-circle me-2" width="32" height="32">
+                                        <div>
+                                            <small class="fw-semibold d-block">Pedro Lima</small>
+                                            <small class="text-muted">1.090 pts</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-1">🎁 Recompensas Disponíveis</h5>
+                                    <small class="text-muted">Você pode resgatar com seus pontos!</small>
+                                </div>
+                                <a href="pages/loja.html" class="btn btn-swift-orange btn-sm">Ver Loja</a>
+                            </div>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                    <div class="reward-card border rounded-3 p-3 text-center">
+                                        <div class="reward-icon mb-2">
+                                            <i class="bi bi-cup-hot-fill text-warning" style="font-size: 2.5rem;"></i>
+                                        </div>
+                                        <h6 class="fw-semibold mb-1">Vale-Compra Swift</h6>
+                                        <p class="text-muted small mb-2">R$ 50 em produtos</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success text-white">800 pontos</span>
+                                        </div>
+                                        <button class="btn btn-swift-orange btn-sm btn-redeem"
+                                            data-reward="Vale-Compra Swift" data-points="800"
+                                            data-description="R$ 50,00 para usar em qualquer produto da loja. Válido por 90 dias."
+                                            onclick="openRedeemModal('Vale-Compra Swift', 800, 'R$ 50,00 para usar em qualquer produto da loja. Válido por 90 dias.')">Resgatar
+                                            Agora</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                    <div class="reward-card border rounded-3 p-3 text-center">
+                                        <div class="reward-icon mb-2">
+                                            <i class="bi bi-gift-fill text-danger" style="font-size: 2.5rem;"></i>
+                                        </div>
+                                        <h6 class="fw-semibold mb-1">Kit Churrasco Premium</h6>
+                                        <p class="text-muted small mb-2">Carnes e temperos especiais</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success text-white">1.200 pontos</span>
+                                        </div>
+                                        <button class="btn btn-swift-orange btn-sm btn-redeem"
+                                            data-reward="Kit Churrasco Premium" data-points="1200"
+                                            data-description="Kit completo com carnes selecionadas, temperos e acessórios para churrasco."
+                                            onclick="openRedeemModal('Kit Churrasco Premium', 1200, 'Kit completo com carnes selecionadas, temperos e acessórios para churrasco.')">Resgatar
+                                            Agora</button>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 col-md-6 mb-3">
+                                    <div class="reward-card border rounded-3 p-3 text-center">
+                                        <div class="reward-icon mb-2">
+                                            <i class="bi bi-calendar-check-fill text-info"
+                                                style="font-size: 2.5rem;"></i>
+                                        </div>
+                                        <h6 class="fw-semibold mb-1">Folga Extra</h6>
+                                        <p class="text-muted small mb-2">1 dia de folga adicional</p>
+                                        <div class="mb-2">
+                                            <span class="badge bg-success text-white">2.000 pontos</span>
+                                        </div>
+                                        <button class="btn btn-outline-secondary btn-sm" disabled>
+                                            <i class="bi bi-clock me-1"></i>Em breve
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="insufficientPointsModal" tabindex="-1" aria-labelledby="insufficientPointsModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow position-relative">
+                <button type="button"
+                    class="btn btn-outline-warning rounded-circle position-absolute d-flex align-items-center justify-content-center"
+                    data-bs-dismiss="modal" aria-label="Close"
+                    style="top: -12px; right: -12px; width: 35px; height: 35px; z-index: 1051; font-size: 14px; background: rgba(255,255,255,0.95); border: 2px solid #e67e22; color: #e67e22; backdrop-filter: blur(10px); box-shadow: 0 2px 8px rgba(230,126,34,0.2);">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+                <div class="modal-header bg-gradient text-white border-0"
+                    style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+                    <h5 class="modal-title fw-bold w-100 text-center" id="insufficientPointsModalLabel">
+                        <i class="bi bi-exclamation-circle me-2"></i>Pontos Insuficientes
+                    </h5>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="mb-4">
+                        <div class="bg-danger bg-opacity-10 rounded-circle mx-auto d-flex align-items-center justify-content-center"
+                            style="width: 80px; height: 80px;">
+                            <i class="bi bi-wallet-fill text-danger" style="font-size: 2.5rem;"></i>
+                        </div>
+                    </div>
+
+                    <h4 class="fw-bold mb-3 text-dark">Puxa! Você não tem pontos suficientes</h4>
+
+                    <div class="row mb-4">
+                        <div class="col-6">
+                            <div class="bg-light rounded p-3">
+                                <h6 class="text-muted mb-1">Você tem</h6>
+                                <h4 class="text-success fw-bold" id="currentPointsAlert">0</h4>
+                                <small class="text-muted">pontos</small>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="bg-light rounded p-3">
+                                <h6 class="text-muted mb-1">Precisa de</h6>
+                                <h4 class="text-danger fw-bold" id="requiredPointsAlert">0</h4>
+                                <small class="text-muted">pontos</small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info border-0 bg-info bg-opacity-10">
+                        <i class="bi bi-lightbulb-fill text-info me-2"></i>
+                        <strong>Dica:</strong> Participe dos desafios para ganhar mais pontos!
+                    </div>
+                </div>
+                <div class="modal-footer border-0 justify-content-center">
+                    <a href="pages/desafios.html" class="btn btn-swift-orange px-4">
+                        <i class="bi bi-trophy me-2"></i>Ver Desafios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="redeemModal" tabindex="-1" aria-labelledby="redeemModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-swift-orange text-white">
+                    <h5 class="modal-title" id="redeemModalTitle">Confirmar Resgate</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-4">
+                        <i class="bi bi-gift-fill text-swift-orange" style="font-size: 3rem;"></i>
+                    </div>
+
+                    <div class="reward-details mb-4">
+                        <h4 class="text-center mb-3" id="rewardName">Recompensa</h4>
+                        <p class="text-muted text-center" id="rewardDescription">Descrição da recompensa</p>
+
+                        <div class="row text-center">
+                            <div class="col-6">
+                                <div class="p-3 bg-light rounded">
+                                    <h6 class="text-muted mb-1">Custo</h6>
+                                    <h5 class="text-swift-orange fw-bold" id="rewardPoints">0</h5>
+                                    <small class="text-muted">pontos</small>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 bg-light rounded">
+                                    <h6 class="text-muted mb-1">Seus pontos</h6>
+                                    <h5 class="text-success fw-bold" id="userCurrentPoints">0</h5>
+                                    <small class="text-muted">disponíveis</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 p-3 bg-info bg-opacity-10 rounded">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span>Pontos após resgate:</span>
+                                <strong class="text-info" id="pointsAfterRedeem">0</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        <strong>Atenção:</strong> Esta ação não pode ser desfeita. Confirme se deseja resgatar esta
+                        recompensa.
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                        <i class="bi bi-x-circle me-2"></i>Cancelar
+                    </button>
+                    <button type="button" class="btn btn-swift-orange" id="confirmRedeemBtn" onclick="confirmRedeem()">
+                        <i class="bi bi-check-circle me-2"></i>Confirmar Resgate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/points-system.js"></script>
+    <script src="assets/js/avatar-utils.js"></script>
+    <script src="assets/js/rewards-system.js"></script>
+    <script src="assets/js/ranking-system.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

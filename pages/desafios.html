@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Gamificação - Desafios</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-header fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <i class="bi bi-geo-alt-fill me-1"></i>
+                    <span>São Paulo - SP</span>
+                    <small class="ms-2">Sistema válido para colaboradores Swift</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>🎯 Gamificação Swift - Desperte seu potencial!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <img src="../assets/images/swift-foods-logo-3.png" alt="Swift" height="40" class="me-2">
+                <small class="text-swift-orange">Gamificação</small>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: var(--swift-orange);">
+                <span class="navbar-toggler-icon"
+                    style="background-image: url('data:image/svg+xml,%3csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 30 30&quot;%3e%3cpath stroke=&quot;rgba%2833, 37, 41, 0.75%29&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; stroke-width=&quot;2&quot; d=&quot;M4 7h22M4 15h22M4 23h22&quot;/%3e%3c/svg%3e');"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="../index.html"
+                            style="color: var(--text-dark);">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase active" href="desafios.html"
+                            style="color: var(--swift-orange);">Desafios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="ranking.html"
+                            style="color: var(--text-dark);">Ranking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="loja.html"
+                            style="color: var(--text-dark);">Loja</a>
+                    </li>
+                </ul>
+
+
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center btn-swift-green rounded px-3"
+                            href="#" role="button" data-bs-toggle="dropdown" style="text-decoration: none;">
+                            <img src="../assets/images/users/João Silva.png" alt="João Silva"
+                                class="rounded-circle me-2" width="28" height="28">
+                            <div class="text-start">
+                                <small class="d-block text-white">BEM-VINDO!</small>
+                                <strong class="text-white">João Silva</strong>
+                            </div>
+                            <span class="badge bg-warning text-dark ms-2 fw-bold user-points">1.250 pts</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="perfil.html"><i class="bi bi-person me-2"></i>Meu
+                                    Perfil</a></li>
+                            <li><a class="dropdown-item" href="termos.html"><i
+                                        class="bi bi-shield-check me-2"></i>Termos
+                                    e Regulamentos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><span class="dropdown-item disabled text-muted logout-disabled" data-bs-toggle="tooltip"
+                                    data-bs-placement="left"
+                                    title="Sistema de login será implementado no backend. Demo permanece como João Silva.">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Sair</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid" style="margin-top: 140px;">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h2 class="text-dark fw-bold mb-1">🎯 Desafios Swift</h2>
+                        <p class="text-muted">Complete desafios e ganhe pontos para subir no ranking da loja SP Centro!
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row text-center">
+                                <div class="col-md-3 mb-3">
+                                    <div class="progress-circle mb-2">
+                                        <i class="bi bi-bullseye text-success" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h5 class="text-success fw-bold mb-1">4</h5>
+                                    <small class="text-muted">Desafios Ativos</small>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="progress-circle mb-2">
+                                        <i class="bi bi-check-circle-fill text-warning" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h5 class="text-warning fw-bold mb-1">8</h5>
+                                    <small class="text-muted">Concluídos</small>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="progress-circle mb-2">
+                                        <i class="bi bi-star-fill text-swift-orange" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h5 class="text-swift-orange fw-bold mb-1">+85</h5>
+                                    <small class="text-muted">Pontos esta semana</small>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <div class="progress-circle mb-2">
+                                        <i class="bi bi-lightning-fill text-info" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <h5 class="text-info fw-bold mb-1">2x</h5>
+                                    <small class="text-muted">Rush Hour Ativo</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4 class="mb-4">⚡ Desafios Ativos</h4>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card challenge-card-active h-100">
+                        <div class="card-header bg-warning text-dark">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">📅 Missão da Semana</h6>
+                                    <small>Termina em 2 dias</small>
+                                </div>
+                                <span class="badge bg-light text-dark">+150 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-semibold">Vender 5 Combos até Domingo</h6>
+                            <p class="card-text text-muted small flex-grow-1">Ofereça combos premium para aumentar o
+                                ticket médio. Cada combo conta!</p>
+
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="text-muted">Progresso</small>
+                                    <small class="text-muted" data-progress="combos">3/5 combos</small>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 60%"></div>
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-auto">
+                                <small class="text-warning">⏰ 2 dias restantes</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card challenge-card-active h-100">
+                        <div class="card-header bg-success text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">⚡ Hora do Jogo Rápido</h6>
+                                    <small>Ativo agora! 18h-20h</small>
+                                </div>
+                                <span class="badge bg-light text-dark">2x pontos</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-semibold">Pontos Dobrados!</h6>
+                            <p class="card-text text-muted small flex-grow-1">Durante o horário de pico, todos os pontos
+                                são
+                                dobrados. Aproveite!</p>
+
+                            <div class="text-center mt-auto">
+                                <div class="badge bg-success text-white px-4 py-2 fs-6">
+                                    <i class="bi bi-clock me-1"></i>
+                                    <span id="rushTimer">1h 23min restantes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card challenge-card-active h-100">
+                        <div class="card-header bg-info text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">😊 Satisfação do Cliente</h6>
+                                    <small>Desafio diário</small>
+                                </div>
+                                <span class="badge bg-light text-dark">+10 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-semibold">Receber 3 Feedbacks Positivos</h6>
+                            <p class="card-text text-muted small flex-grow-1">Ofereça um atendimento excepcional e peça
+                                avaliação
+                                dos clientes.</p>
+
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="text-muted">Progresso</small>
+                                    <small class="text-muted">1/3 feedbacks</small>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-info" role="progressbar" style="width: 33%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card challenge-card-active h-100">
+                        <div class="card-header bg-primary text-white">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="mb-0 fw-bold">🛒 Cross-sell Master</h6>
+                                    <small>Desafio semanal</small>
+                                </div>
+                                <span class="badge bg-light text-dark">+8 pts</span>
+                            </div>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h6 class="card-title fw-semibold">Realizar 5 Vendas Cruzadas</h6>
+                            <p class="card-text text-muted small flex-grow-1">Sugira produtos complementares e aumente o
+                                valor da
+                                compra.</p>
+
+                            <div class="mt-auto">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <small class="text-muted">Progresso</small>
+                                    <small class="text-muted">2/5 vendas</small>
+                                </div>
+                                <div class="progress" style="height: 8px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 40%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-12">
+                    <h4 class="mb-4">✅ Desafios Concluídos (Esta Semana)</h4>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card challenge-card-completed">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-check-circle-fill text-success" style="font-size: 2rem;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Cliente Fidelizado</h6>
+                                    <small class="text-muted">Trouxe cliente de volta</small>
+                                    <div class="text-success fw-semibold">+15 pontos</div>
+                                </div>
+                                <small class="text-muted">Ontem</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card challenge-card-completed">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-check-circle-fill text-success" style="font-size: 2rem;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Treinamento Completo</h6>
+                                    <small class="text-muted">Workshop de vendas</small>
+                                    <div class="text-success fw-semibold">+12 pontos</div>
+                                </div>
+                                <small class="text-muted">3 dias</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-3">
+                    <div class="card challenge-card-completed">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center">
+                                <div class="me-3">
+                                    <i class="bi bi-check-circle-fill text-success" style="font-size: 2rem;"></i>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <h6 class="mb-1">Sugestão Aprovada</h6>
+                                    <small class="text-muted">Melhoria no atendimento</small>
+                                    <div class="text-success fw-semibold">+10 pontos</div>
+                                </div>
+                                <small class="text-muted">5 dias</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="mb-4">📊 Categorias de Desafios</h4>
+                    <p class="text-muted mb-4">Conheça todas as formas de ganhar pontos no sistema Swift Gamificação
+                        integrado
+                    </p>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-people-fill text-info" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Atendimento ao Cliente</h6>
+                            <p class="text-muted small">Melhore a experiência do cliente</p>
+                            <div class="mb-2">
+                                <span class="badge bg-info text-white">+10 pontos</span>
+                            </div>
+                            <small class="text-muted">Por feedback positivo</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-graph-up text-success" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Vendas</h6>
+                            <p class="text-muted small">Aumente o volume de vendas</p>
+                            <div class="mb-2">
+                                <span class="badge bg-success text-white">+5 pontos</span>
+                            </div>
+                            <small class="text-muted">Por venda adicional</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-arrow-up-right-circle text-warning" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Upsell & Cross-sell</h6>
+                            <p class="text-muted small">Incentive recomendações</p>
+                            <div class="mb-2">
+                                <span class="badge bg-warning text-dark">+8 pontos</span>
+                            </div>
+                            <small class="text-muted">Por venda bem-sucedida</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-heart-fill text-danger" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Fidelização</h6>
+                            <p class="text-muted small">Clientes retornando</p>
+                            <div class="mb-2">
+                                <span class="badge bg-danger text-white">+15 pontos</span>
+                            </div>
+                            <small class="text-muted">Por cliente recorrente</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-mortarboard-fill text-primary" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Treinamento</h6>
+                            <p class="text-muted small">Engajamento em capacitações</p>
+                            <div class="mb-2">
+                                <span class="badge bg-primary text-white">+12 pontos</span>
+                            </div>
+                            <small class="text-muted">Por workshop realizado</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card category-card">
+                        <div class="card-body text-center">
+                            <div class="mb-3">
+                                <i class="bi bi-lightbulb-fill text-swift-orange" style="font-size: 3rem;"></i>
+                            </div>
+                            <h6 class="fw-bold">Proatividade</h6>
+                            <p class="text-muted small">Ideias de melhoria</p>
+                            <div class="mb-2">
+                                <span class="badge bg-swift-orange text-white">+10 pontos</span>
+                            </div>
+                            <small class="text-muted">Por sugestão implementada</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/points-system.js"></script>
+    <script src="../assets/js/avatar-utils.js"></script>
+    <script src="../assets/js/rewards-system.js"></script>
+    <script src="../assets/js/ranking-system.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutElements = document.querySelectorAll('.logout-disabled');
+            logoutElements.forEach(element => {
+                new bootstrap.Tooltip(element, {
+                    placement: 'left',
+                    trigger: 'hover focus'
+                });
+            });
+        });
+    </script>
+
+    <script>
+        function updateRushTimer() {
+            const timerElement = document.getElementById('rushTimer');
+            if (!timerElement) return;
+
+            let totalMinutes = 83;
+            const interval = setInterval(() => {
+                totalMinutes--;
+                const hours = Math.floor(totalMinutes / 60);
+                const minutes = totalMinutes % 60;
+
+                if (totalMinutes <= 0) {
+                    timerElement.textContent = 'Rush Hour Encerrado';
+                    timerElement.parentElement.classList.remove('bg-success');
+                    timerElement.parentElement.classList.add('bg-secondary');
+                    clearInterval(interval);
+                } else {
+                    timerElement.textContent = `${hours}h ${minutes}min restantes`;
+                }
+            }, 60000);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(updateRushTimer, 1000);
+        });
+    </script>
+</body>
+
+</html>

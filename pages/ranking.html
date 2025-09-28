@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Gamificação - Ranking</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-header fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <i class="bi bi-geo-alt-fill me-1"></i>
+                    <span>São Paulo - SP</span>
+                    <small class="ms-2">Sistema válido para colaboradores Swift</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>🏆 Rankings Swift - Competição saudável!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <img src="../assets/images/swift-foods-logo-3.png" alt="Swift" height="40" class="me-2">
+                <small class="text-swift-orange">Gamificação</small>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: var(--swift-orange);">
+                <span class="navbar-toggler-icon"
+                    style="background-image: url('data:image/svg+xml,%3csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 30 30&quot;%3e%3cpath stroke=&quot;rgba%2833, 37, 41, 0.75%29&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; stroke-width=&quot;2&quot; d=&quot;M4 7h22M4 15h22M4 23h22&quot;/%3e%3c/svg%3e');"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="../index.html"
+                            style="color: var(--text-dark);">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="desafios.html"
+                            style="color: var(--text-dark);">Desafios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase active" href="ranking.html"
+                            style="color: var(--swift-orange);">Ranking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="loja.html"
+                            style="color: var(--text-dark);">Loja</a>
+                    </li>
+                </ul>
+
+
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center btn-swift-green rounded px-3"
+                            href="#" role="button" data-bs-toggle="dropdown" style="text-decoration: none;">
+                            <img src="../assets/images/users/João Silva.png" alt="João Silva"
+                                class="rounded-circle me-2" width="28" height="28">
+                            <div class="text-start">
+                                <small class="d-block text-white">BEM-VINDO!</small>
+                                <strong class="text-white">João Silva</strong>
+                            </div>
+                            <span class="badge bg-warning text-dark ms-2 fw-bold user-points">1.250 pts</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="perfil.html"><i class="bi bi-person me-2"></i>Meu
+                                    Perfil</a></li>
+                            <li><a class="dropdown-item" href="termos.html"><i
+                                        class="bi bi-shield-check me-2"></i>Termos
+                                    e Regulamentos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><span class="dropdown-item disabled text-muted logout-disabled" data-bs-toggle="tooltip"
+                                    data-bs-placement="left"
+                                    title="Sistema de login será implementado no backend. Demo permanece como João Silva.">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Sair</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container-fluid" style="margin-top: 140px;">
+        <div class="container">
+
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h2 class="text-dark fw-bold mb-1">🏆 Rankings Swift - Loja SP Centro</h2>
+                        <p class="text-muted mb-0">Acompanhe sua posição e a dos seus colegas da unidade São Paulo
+                            Centro</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="bi bi-people-fill text-warning" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 class="text-warning fw-bold mb-1">24</h4>
+                            <small class="text-muted">Colaboradores Ativos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="bi bi-graph-up-arrow text-success" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 class="text-success fw-bold mb-1">1.580</h4>
+                            <small class="text-muted">Maior Pontuação</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="bg-info bg-opacity-10 rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+                                style="width: 60px; height: 60px;">
+                                <i class="bi bi-calculator text-info" style="font-size: 1.5rem;"></i>
+                            </div>
+                            <h4 class="text-info fw-bold mb-1">1.127</h4>
+                            <small class="text-muted">Pontuação Média</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <div class="position-relative d-inline-block mb-3">
+                                <img src="../assets/images/users/João Silva.png" alt="João Silva" class="rounded-circle"
+                                    width="60" height="60"
+                                    style="border: 3px solid var(--swift-orange); object-fit: cover;">
+                                <div class="position-absolute bottom-0 end-0 bg-swift-orange rounded-circle d-flex align-items-center justify-content-center"
+                                    style="width: 18px; height: 18px;">
+                                    <i class="bi bi-check-lg text-white" style="font-size: 0.7rem;"></i>
+                                </div>
+                            </div>
+                            <h4 class="text-swift-orange fw-bold mb-1">3º</h4>
+                            <small class="text-muted">Sua Posição</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-1">🏆 Ranking Geral - Loja SP Centro</h5>
+                                    <small class="text-muted">Pontuação total de todos os colaboradores - Atualizado em
+                                        tempo real</small>
+                                </div>
+                                <span class="badge bg-success px-3 py-2">Ao Vivo</span>
+                            </div>
+                        </div>
+                        <div class="card-body pt-2">
+                            <div class="podium-section mb-5">
+                                <div class="row text-center">
+                                    <div class="col-md-4 order-md-1 mb-4">
+                                        <div class="podium-card border rounded-4 p-4"
+                                            style="background: linear-gradient(135deg, #e2e3e5 0%, #c6c8ca 100%);">
+                                            <div class="podium-number mb-3">
+                                                <span class="badge bg-secondary"
+                                                    style="font-size: 1.5rem; width: 50px; height: 50px; line-height: 35px;">2º</span>
+                                            </div>
+                                            <img src="../assets/images/users/Carlos Santos.png" alt="Carlos Santos"
+                                                class="rounded-circle mb-3" width="80" height="80">
+                                            <h5 class="fw-bold mb-1">Carlos Santos</h5>
+                                            <p class="text-muted small mb-2">Vendedor Sênior</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-secondary text-white px-3 py-2 fs-6">1.420
+                                                    pontos</span>
+                                            </div>
+                                            <small class="text-muted">+95 esta semana</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 order-md-2 mb-4">
+                                        <div class="podium-card border rounded-4 p-4 position-relative"
+                                            style="background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); margin-top: -20px;">
+                                            <div class="position-absolute top-0 start-50 translate-middle">
+                                                <i class="bi bi-crown-fill text-warning" style="font-size: 2rem;"></i>
+                                            </div>
+                                            <div class="podium-number mb-3 mt-3">
+                                                <span class="badge bg-warning text-dark"
+                                                    style="font-size: 1.5rem; width: 50px; height: 50px; line-height: 35px;">1º</span>
+                                            </div>
+                                            <img src="../assets/images/users/Maria Oliveira.png" alt="Maria Oliveira"
+                                                class="rounded-circle mb-3" width="80" height="80">
+                                            <h5 class="fw-bold mb-1">Maria Oliveira</h5>
+                                            <p class="text-muted small mb-2">Gerente de Vendas</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-warning text-dark px-3 py-2 fs-6">1.580
+                                                    pontos</span>
+                                            </div>
+                                            <small class="text-muted">+120 esta semana</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 order-md-3 mb-4">
+                                        <div class="podium-card border rounded-4 p-4"
+                                            style="background: linear-gradient(135deg, var(--swift-orange) 0%, var(--swift-orange-dark) 100%); color: white;">
+                                            <div class="podium-number mb-3">
+                                                <span class="badge bg-white text-swift-orange"
+                                                    style="font-size: 1.5rem; width: 50px; height: 50px; line-height: 35px;">3º</span>
+                                            </div>
+                                            <img src="../assets/images/users/João Silva.png" alt="João Silva"
+                                                class="rounded-circle mb-3" width="80" height="80">
+                                            <h5 class="fw-bold mb-1">João Silva <span class="small">(Você)</span></h5>
+                                            <p class="opacity-75 small mb-2">Vendedor Pleno</p>
+                                            <div class="mb-2">
+                                                <span class="badge bg-white text-swift-orange px-3 py-2 fs-6">1.250
+                                                    pontos</span>
+                                            </div>
+                                            <small class="opacity-75">+85 esta semana</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ranking-table">
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th width="60px">Pos.</th>
+                                                <th>Colaborador</th>
+                                                <th width="120px">Pontuação</th>
+                                                <th width="120px">Semana</th>
+                                                <th width="100px">Nível</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><span class="badge bg-light text-dark">4º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Ana Costa.png" alt="Ana Costa"
+                                                            class="rounded-circle me-3" width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Ana Costa</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">1.180</span></td>
+                                                <td><span class="text-success">+75</span></td>
+                                                <td><span class="badge bg-info text-white">Intermediário</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="badge bg-light text-dark">5º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Pedro Lima.png"
+                                                            alt="Pedro Lima" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Pedro Lima</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">1.090</span></td>
+                                                <td><span class="text-success">+65</span></td>
+                                                <td><span class="badge bg-info text-white">Intermediário</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="badge bg-light text-dark">6º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Lúcia Ferreira.png"
+                                                            alt="Lúcia Ferreira" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Lúcia Ferreira</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">985</span></td>
+                                                <td><span class="text-success">+55</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span class="badge bg-light text-dark">7º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Bruno Almeida.png"
+                                                            alt="Bruno Almeida" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Bruno Almeida</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">920</span></td>
+                                                <td><span class="text-success">+48</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">8º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Carla Mendes.png"
+                                                            alt="Carla Mendes" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Carla Mendes</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">875</span></td>
+                                                <td><span class="text-success">+42</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">9º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Thiago Rodrigues.png"
+                                                            alt="Thiago Rodrigues" class="rounded-circle me-3"
+                                                            width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Thiago Rodrigues</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">820</span></td>
+                                                <td><span class="text-success">+38</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">10º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Vanessa Silva.png"
+                                                            alt="Vanessa Silva" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Vanessa Silva</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">780</span></td>
+                                                <td><span class="text-success">+35</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">11º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Felipe Santos.png"
+                                                            alt="Felipe Santos" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Felipe Santos</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">735</span></td>
+                                                <td><span class="text-success">+32</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">12º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Isabella Rocha.png"
+                                                            alt="Isabella Rocha" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Isabella Rocha</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">695</span></td>
+                                                <td><span class="text-success">+28</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">13º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Roberto Nascimento.png"
+                                                            alt="Roberto Nascimento" class="rounded-circle me-3"
+                                                            width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Roberto Nascimento</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">650</span></td>
+                                                <td><span class="text-success">+25</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">14º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Marcelo Vieira.png"
+                                                            alt="Marcelo Vieira" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Marcelo Vieira</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">620</span></td>
+                                                <td><span class="text-success">+22</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">15º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Júlia Martins.png"
+                                                            alt="Júlia Martins" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Júlia Martins</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">580</span></td>
+                                                <td><span class="text-success">+20</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">16º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Daniel Castro.png"
+                                                            alt="Daniel Castro" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Daniel Castro</div>
+                                                            <small class="text-muted">Vendedor</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">540</span></td>
+                                                <td><span class="text-success">+18</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">17º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Larissa Monteiro.png"
+                                                            alt="Larissa Monteiro" class="rounded-circle me-3"
+                                                            width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Larissa Monteiro</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">498</span></td>
+                                                <td><span class="text-success">+15</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">18º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Gabriel Oliveira.png"
+                                                            alt="Gabriel Oliveira" class="rounded-circle me-3"
+                                                            width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Gabriel Oliveira</div>
+                                                            <small class="text-muted">Vendedor Trainee</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">456</span></td>
+                                                <td><span class="text-success">+12</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">19º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Renata Souza.png"
+                                                            alt="Renata Souza" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Renata Souza</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">420</span></td>
+                                                <td><span class="text-success">+10</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">20º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Leonardo Dias.png"
+                                                            alt="Leonardo Dias" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Leonardo Dias</div>
+                                                            <small class="text-muted">Vendedor Trainee</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">385</span></td>
+                                                <td><span class="text-success">+8</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">21º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Patrícia Gomes.png"
+                                                            alt="Patrícia Gomes" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Patrícia Gomes</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">350</span></td>
+                                                <td><span class="text-success">+6</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">22º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Alexandre Ferreira.png"
+                                                            alt="Alexandre Ferreira" class="rounded-circle me-3"
+                                                            width="40" height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Alexandre Ferreira</div>
+                                                            <small class="text-muted">Vendedor Trainee</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">315</span></td>
+                                                <td><span class="text-success">+5</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">23º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Tatiana Ribeiro.png"
+                                                            alt="Tatiana Ribeiro" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Tatiana Ribeiro</div>
+                                                            <small class="text-muted">Vendedora</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">285</span></td>
+                                                <td><span class="text-success">+4</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                            <tr class="hidden-row" style="display: none;">
+                                                <td><span class="badge bg-light text-dark">24º</span></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="../assets/images/users/Lorenzo Barbosa.png"
+                                                            alt="Lorenzo Barbosa" class="rounded-circle me-3" width="40"
+                                                            height="40">
+                                                        <div>
+                                                            <div class="fw-semibold">Lorenzo Barbosa</div>
+                                                            <small class="text-muted">Vendedor Trainee</small>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td><span class="fw-bold">245</span></td>
+                                                <td><span class="text-success">+3</span></td>
+                                                <td><span class="badge bg-secondary text-white">Iniciante</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="text-center mt-4" id="loadMoreSection">
+                                    <button class="btn btn-outline-primary" id="loadMoreBtn"
+                                        onclick="toggleMoreEmployees()">
+                                        <i class="bi bi-arrow-down-circle me-2"></i>
+                                        Ver Mais Colaboradores
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/points-system.js"></script>
+    <script src="../assets/js/avatar-utils.js"></script>
+    <script src="../assets/js/rewards-system.js"></script>
+    <script src="../assets/js/ranking-system.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+
+</body>
+
+</html>

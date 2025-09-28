@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Gamificação - Meu Perfil</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="../assets/css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-header fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <i class="bi bi-geo-alt-fill me-1"></i>
+                    <span>São Paulo - SP</span>
+                    <small class="ms-2">Sistema válido para colaboradores Swift</small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>👤 Perfil Swift - Suas conquistas!</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg main-navbar fixed-top" style="top: 40px;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <img src="../assets/images/swift-foods-logo-3.png" alt="Swift" height="40" class="me-2">
+                <small class="text-swift-orange">Gamificação</small>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                style="border-color: var(--swift-orange);">
+                <span class="navbar-toggler-icon"
+                    style="background-image: url('data:image/svg+xml,%3csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 30 30&quot;%3e%3cpath stroke=&quot;rgba%2833, 37, 41, 0.75%29&quot; stroke-linecap=&quot;round&quot; stroke-miterlimit=&quot;10&quot; stroke-width=&quot;2&quot; d=&quot;M4 7h22M4 15h22M4 23h22&quot;/%3e%3c/svg%3e');"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="../index.html"
+                            style="color: var(--text-dark);">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="desafios.html"
+                            style="color: var(--text-dark);">Desafios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="ranking.html"
+                            style="color: var(--text-dark);">Ranking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-uppercase" href="loja.html"
+                            style="color: var(--text-dark);">Loja</a>
+                    </li>
+                </ul>
+
+
+                <div class="navbar-nav">
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center btn-swift-green rounded px-3"
+                            href="#" role="button" data-bs-toggle="dropdown" style="text-decoration: none;">
+                            <img src="../assets/images/users/João Silva.png" alt="João Silva"
+                                class="rounded-circle me-2" width="28" height="28">
+                            <div class="text-start">
+                                <small class="d-block text-white">BEM-VINDO!</small>
+                                <strong class="text-white">João Silva</strong>
+                            </div>
+                            <span class="badge bg-warning text-dark ms-2 fw-bold user-points">1.250 pts</span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item active" href="perfil.html"><i class="bi bi-person me-2"></i>Meu
+                                    Perfil</a></li>
+                            <li><a class="dropdown-item" href="termos.html"><i
+                                        class="bi bi-shield-check me-2"></i>Termos
+                                    e Regulamentos</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><span class="dropdown-item disabled text-muted logout-disabled" data-bs-toggle="tooltip"
+                                    data-bs-placement="left"
+                                    title="Sistema de login será implementado no backend. Demo permanece como João Silva.">
+                                    <i class="bi bi-box-arrow-right me-2"></i>Sair</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="container-fluid" style="margin-top: 140px;">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12">
+                    <div class="card profile-header">
+                        <div class="card-body p-4">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 text-center mb-3 mb-md-0">
+                                    <img src="../assets/images/users/João Silva.png" alt="João Silva"
+                                        class="rounded-circle mb-3" width="120" height="120"
+                                        style="border: 4px solid var(--swift-orange); object-fit: cover;">
+                                    <div>
+                                        <span class="badge bg-swift-orange text-white px-3 py-2 fs-6">Nível
+                                            Intermediário</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <h2 class="fw-bold mb-2">João Silva</h2>
+                                    <div class="mb-3">
+                                        <p class="text-muted mb-1"><i class="bi bi-briefcase me-2"></i>Vendedor Pleno
+                                        </p>
+                                        <p class="text-muted mb-1"><i class="bi bi-building me-2"></i>Loja SP Centro</p>
+                                        <p class="text-muted mb-1"><i class="bi bi-calendar3 me-2"></i>Na Swift desde
+                                            Janeiro 2023</p>
+                                        <p class="text-muted mb-0"><i
+                                                class="bi bi-envelope me-2"></i>joao.silva@swift.com.br</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 text-center">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <h4 class="text-swift-orange fw-bold mb-1">1.250</h4>
+                                            <small class="text-muted">Pontos Totais</small>
+                                        </div>
+                                        <div class="col-6">
+                                            <h4 class="text-success fw-bold mb-1">3º</h4>
+                                            <small class="text-muted">Posição Atual</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-graph-up text-success mb-3" style="font-size: 2.5rem;"></i>
+                            <h4 class="text-success fw-bold mb-1">+85</h4>
+                            <p class="text-muted mb-0">Pontos Esta Semana</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-trophy text-warning mb-3" style="font-size: 2.5rem;"></i>
+                            <h4 class="text-warning fw-bold mb-1">8</h4>
+                            <p class="text-muted mb-0">Desafios Concluídos</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-people text-info mb-3" style="font-size: 2.5rem;"></i>
+                            <h4 class="text-info fw-bold mb-1">95%</h4>
+                            <p class="text-muted mb-0">Satisfação Cliente</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="card text-center h-100">
+                        <div class="card-body">
+                            <i class="bi bi-calendar-check text-primary mb-3" style="font-size: 2.5rem;"></i>
+                            <h4 class="text-primary fw-bold mb-1">22</h4>
+                            <p class="text-muted mb-0">Dias Consecutivos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-8 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <h5 class="card-title fw-bold mb-1">📈 Progressão de Nível</h5>
+                            <small class="text-muted">Acompanhe sua evolução no sistema Swift</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div>
+                                        <h6 class="text-swift-orange fw-bold mb-1">Nível Intermediário</h6>
+                                        <small class="text-muted">1.250 / 2.000 pontos para Avançado</small>
+                                    </div>
+                                    <span class="badge bg-swift-orange text-white">62.5%</span>
+                                </div>
+                                <div class="progress" style="height: 12px;">
+                                    <div class="progress-bar bg-swift-orange" role="progressbar" style="width: 62.5%">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="level-timeline">
+                                <div class="d-flex justify-content-between text-center">
+                                    <div class="level-milestone completed">
+                                        <div class="milestone-circle bg-success text-white">✓</div>
+                                        <small class="text-success fw-semibold">Iniciante</small>
+                                        <div class="text-muted small">0-500 pts</div>
+                                    </div>
+                                    <div class="level-milestone current">
+                                        <div class="milestone-circle bg-swift-orange text-white">●</div>
+                                        <small class="text-swift-orange fw-semibold">Intermediário</small>
+                                        <div class="text-muted small">501-2.000 pts</div>
+                                    </div>
+                                    <div class="level-milestone">
+                                        <div class="milestone-circle bg-light text-muted">○</div>
+                                        <small class="text-muted">Avançado</small>
+                                        <div class="text-muted small">2.001-4.000 pts</div>
+                                    </div>
+                                    <div class="level-milestone">
+                                        <div class="milestone-circle bg-light text-muted">○</div>
+                                        <small class="text-muted">Expert</small>
+                                        <div class="text-muted small">4.000+ pts</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <h5 class="card-title fw-bold mb-1">🎯 Conquistas</h5>
+                            <small class="text-muted">Badges conquistados</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="achievement-grid">
+                                <div class="achievement-item earned mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="achievement-icon bg-warning text-white me-3">
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Primeira Venda</h6>
+                                            <small class="text-muted">Conquistado em Jan/2023</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-item earned mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="achievement-icon bg-success text-white me-3">
+                                            <i class="bi bi-heart-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Cliente Fiel</h6>
+                                            <small class="text-muted">3+ clientes recorrentes</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-item earned mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="achievement-icon bg-info text-white me-3">
+                                            <i class="bi bi-mortarboard-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0">Estudioso</h6>
+                                            <small class="text-muted">5+ treinamentos completos</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="achievement-item locked mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="achievement-icon bg-light text-muted me-3">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </div>
+                                        <div>
+                                            <h6 class="mb-0 text-muted">Top Vendedor</h6>
+                                            <small class="text-muted">Seja #1 no mês</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6 mb-4" id="atividade">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <h5 class="card-title fw-bold mb-1">🕒 Atividade Recente</h5>
+                            <small class="text-muted">Últimas ações no sistema</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="activity-timeline">
+                                <div class="activity-item mb-3">
+                                    <div class="d-flex">
+                                        <div class="activity-icon bg-success text-white me-3">
+                                            <i class="bi bi-plus-circle"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Venda Realizada</h6>
+                                            <p class="text-muted small mb-1">Combo Premium vendido • +15 pontos</p>
+                                            <small class="text-success">Há 2 horas</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="activity-item mb-3">
+                                    <div class="d-flex">
+                                        <div class="activity-icon bg-info text-white me-3">
+                                            <i class="bi bi-heart"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Feedback Positivo</h6>
+                                            <p class="text-muted small mb-1">Cliente Maria A. • "Atendimento excelente!"
+                                            </p>
+                                            <small class="text-info">Ontem</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="activity-item mb-3">
+                                    <div class="d-flex">
+                                        <div class="activity-icon bg-warning text-dark me-3">
+                                            <i class="bi bi-trophy"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Subiu no Ranking</h6>
+                                            <p class="text-muted small mb-1">5º → 3º lugar na loja SP Centro</p>
+                                            <small class="text-warning">2 dias atrás</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="activity-item">
+                                    <div class="d-flex">
+                                        <div class="activity-icon bg-primary text-white me-3">
+                                            <i class="bi bi-mortarboard"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Treinamento Concluído</h6>
+                                            <p class="text-muted small mb-1">Workshop "Técnicas de Vendas" • +12 pontos
+                                            </p>
+                                            <small class="text-primary">3 dias atrás</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4" id="pontos">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <h5 class="card-title fw-bold mb-1">📊 Histórico de Pontos</h5>
+                            <small class="text-muted">Evolução nos últimos 7 dias</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="points-chart">
+                                <div class="chart-container mb-4">
+                                    <div class="d-flex justify-content-between align-items-end" style="height: 120px;">
+                                        <div class="chart-bar">
+                                            <div class="bar bg-light" style="height: 50px; width: 20px;"
+                                                title="Segunda: +12 pts"></div>
+                                            <small class="text-muted">Seg</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-success" style="height: 80px; width: 20px;"
+                                                title="Terça: +18 pts"></div>
+                                            <small class="text-muted">Ter</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-info" style="height: 60px; width: 20px;"
+                                                title="Quarta: +15 pts"></div>
+                                            <small class="text-muted">Qua</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-warning" style="height: 90px; width: 20px;"
+                                                title="Quinta: +22 pts"></div>
+                                            <small class="text-muted">Qui</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-swift-orange" style="height: 70px; width: 20px;"
+                                                title="Sexta: +18 pts"></div>
+                                            <small class="text-muted">Sex</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-light" style="height: 30px; width: 20px;"
+                                                title="Sábado: +0 pts"></div>
+                                            <small class="text-muted">Sáb</small>
+                                        </div>
+                                        <div class="chart-bar">
+                                            <div class="bar bg-light" style="height: 30px; width: 20px;"
+                                                title="Domingo: +0 pts"></div>
+                                            <small class="text-muted">Dom</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="week-summary">
+                                    <div class="row text-center">
+                                        <div class="col-4">
+                                            <h6 class="text-success fw-bold">+85</h6>
+                                            <small class="text-muted">Esta Semana</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="text-info fw-bold">18.1</h6>
+                                            <small class="text-muted">Média Diária</small>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6 class="text-warning fw-bold">22</h6>
+                                            <small class="text-muted">Melhor Dia</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title fw-bold mb-1">🎁 Recompensas Resgatadas</h5>
+                                    <small class="text-muted">Histórico de resgates</small>
+                                </div>
+                                <a href="loja.html" class="btn btn-outline-primary btn-sm">Ver Loja</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="reward-history">
+                                <div class="reward-item mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="reward-icon bg-success text-white me-3">
+                                            <i class="bi bi-cup-hot"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Combo Lanche</h6>
+                                            <small class="text-muted">Resgatado em 20/09/2024</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="text-success fw-semibold">-450 pts</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="reward-item mb-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="reward-icon bg-info text-white me-3">
+                                            <i class="bi bi-mortarboard"></i>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <h6 class="mb-1">Curso de Capacitação</h6>
+                                            <small class="text-muted">Resgatado em 15/09/2024</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <div class="text-info fw-semibold">-600 pts</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center">
+                                    <small class="text-muted">Total resgatado: 1.050 pontos</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-header bg-transparent border-0 pt-4 pb-2">
+                            <h5 class="card-title fw-bold mb-1">🎯 Metas Pessoais</h5>
+                            <small class="text-muted">Objetivos para este mês</small>
+                        </div>
+                        <div class="card-body">
+                            <div class="goals-list">
+                                <div class="goal-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small class="fw-semibold">Alcançar Nível Avançado</small>
+                                        <small class="text-muted">750 pts restantes</small>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar bg-swift-orange" role="progressbar"
+                                            style="width: 62.5%"></div>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small class="fw-semibold">Subir para 1º Lugar</small>
+                                        <small class="text-muted">330 pts de diferença</small>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 79%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="goal-item mb-3">
+                                    <div class="d-flex justify-content-between mb-1">
+                                        <small class="fw-semibold">Missões Semanais</small>
+                                        <small class="text-muted">3/4 concluídas</small>
+                                    </div>
+                                    <div class="progress" style="height: 6px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="text-center mt-4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="text-swift-orange fw-bold">750</div>
+                                            <small class="text-muted">Pts p/ Avançado</small>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-warning fw-bold">330</div>
+                                            <small class="text-muted">Pts p/ 1º lugar</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/points-system.js"></script>
+    <script src="../assets/js/avatar-utils.js"></script>
+    <script src="../assets/js/rewards-system.js"></script>
+    <script src="../assets/js/ranking-system.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>
