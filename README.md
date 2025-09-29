@@ -98,12 +98,6 @@ http://localhost:8000
 1. Fazer download do projeto
 2. Abrir o arquivo `index.html` no navegador
 
-## 👥 Equipe de Desenvolvimento
-
-- **[Nome]** - RM [número] - [função]
-- **[Nome]** - RM [número] - [função]
-- **[Nome]** - RM [número] - [função]
-
 ## 📊 Entregáveis Sprint 2
 
 ### ✅ Concluído
