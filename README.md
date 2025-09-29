@@ -125,6 +125,5 @@ http://localhost:8000
 ---
 
 **FIAP - Faculdade de Informática e Administração Paulista**  
-**Curso:** [Nome do Curso]  
-**Professor:** [Nome do Professor]  
-**Ano:** 2024
+**Curso:** Análise e Desenvolvimento de Sistemas
+**Ano:** 2025
